@@ -1,0 +1,9 @@
+path = "D:\\fyp\\pinnar\\data\\2022_07_11_13_03_06_l\\"
+core.clearAll()
+for(i=1; i<3; i++){
+	core.loadObject(path+i.toString() + ".obj")
+	var id = core.getObjectId(i.toString() + ".obj")
+	meshgrading.meshGrading(id,0.0015,0.01,3,2,4)
+	core.saveObject(id,path+i.toString()+"_meshgrading"+".obj")
+	core.clearAll()
+}
